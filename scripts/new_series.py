@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 # askFor asks for user input
 def askFor(label):
@@ -39,7 +40,9 @@ if len(seriesname.split(" ")) > 1:
   seriesname = checkFormat(seriesname)
 
 # creating directories
-rootdir = os.path.join(".", "content", seriesname)
+gitroot = subprocess.getoutput("git rev-parse --show-toplevel")
+
+rootdir = os.path.join(gitroot, "content", seriesname)
 
 dirnames = [
   os.path.join(rootdir, "New-Post"),

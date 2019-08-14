@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 print("Reading valid directories..\n")
 
@@ -9,7 +10,10 @@ unidentified = []
 # for root, subdirs, files in os.walk(os.path.join(".","content")):
 #   print(subdirs)
 
-rootdir = os.path.join(".", "content")
+gitroot = subprocess.getoutput("git rev-parse --show-toplevel")
+# print(gitroot)
+
+rootdir = os.path.join(gitroot, "content")
 
 # print(os.listdir(os.path.join(".","content")))
 
