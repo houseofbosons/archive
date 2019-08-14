@@ -47,7 +47,7 @@ dirname = os.path.join(gitroot, "content", postname)
 
 filenames = [
   os.path.join(dirname, postname.replace(' ', '-')+"-0.md"),
-  os.path.join(dirname, postname.replace(' ', '-')+"-0.html")
+  # os.path.join(dirname, postname.replace(' ', '-')+"-0.html")
 ]
 
 conflict = os.path.exists(dirname)

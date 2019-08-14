@@ -51,7 +51,7 @@ dirnames = [
 
 filenames = [
   os.path.join(dirnames[0], "New-Post-0.md"),
-  os.path.join(dirnames[1], "Another-Post-0.html")
+  os.path.join(dirnames[1], "Another-Post-0.md")
 ]
 
 conflict =  os.path.exists(rootdir)
